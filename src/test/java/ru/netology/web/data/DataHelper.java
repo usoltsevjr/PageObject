@@ -15,7 +15,7 @@ public class DataHelper {
     }
 
     public static AuthInfo getAuthInfo() {
-        return new AuthInfo("vasya", "qwert123");
+        return new AuthInfo("vasya", "qwerty123");
     }
 
     @Value
@@ -47,5 +47,13 @@ public class DataHelper {
 
     public static int getBalanceIfDecrease(int balance, int amount) {
         return balance - amount;
+    }
+
+    public static TransferInfo getEmptyCardNumber() {
+        return new TransferInfo("");
+    }
+
+    public static TransferInfo getIncorrectCardNumber() {
+        return new TransferInfo("5559000000002222");
     }
 }
