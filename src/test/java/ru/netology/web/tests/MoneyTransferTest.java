@@ -52,10 +52,8 @@ public class MoneyTransferTest {
         transferPage.moneyTransfer(transferInfo, amount);
         val balanceOfSecondCard = getBalanceIfIncrease(expectedBalanceOfSecondCard, amount);
         val balanceOfFirstCard = getBalanceIfDecrease(expectedBalanceOfFirstCard, amount);
-        val finalBalanceOfSecondCard = dashboardPage.getCurrentBalanceOfSecondCard();
-        val finalBalanceOfFirstCard = dashboardPage.getCurrentBalanceOfFirstCard();
-        assertEquals(balanceOfSecondCard, finalBalanceOfSecondCard);
-        assertEquals(balanceOfFirstCard, finalBalanceOfFirstCard);
+        assertEquals(balanceOfSecondCard, balanceOfSecondCard);
+        assertEquals(balanceOfFirstCard, balanceOfFirstCard);
     }
 
     @Test
