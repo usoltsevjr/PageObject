@@ -1,9 +1,7 @@
 package ru.netology.web.tests;
 
 import lombok.val;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import ru.netology.web.data.DataHelper;
 import ru.netology.web.pages.DashboardPage;
 import ru.netology.web.pages.LoginPage;
@@ -12,6 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.netology.web.data.DataHelper.*;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class MoneyTransferTest {
 
     @BeforeEach
